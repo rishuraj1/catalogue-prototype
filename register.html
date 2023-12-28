@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Register Page</title>
+</head>
+<body class="bg-gray-100 justify-center items-center h-screen">
+    <div class="container mx-auto p-6 bg-white rounded shadow-md">
+        <form id="registerForm">
+            <h2 class="text-2xl font-bold mb-4">Register</h2>
+            <label for="newUsername" class="block mb-2">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" class="w-full p-2 border rounded" required>
+            <label for="newPassword" class="block mt-3 mb-2">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" class="w-full p-2 border rounded" required>
+            
+            <!-- Product Details -->
+            <h3 class="text-lg font-semibold mt-4">Product Details</h3>
+            <label for="productName" class="block mb-2">Product Name:</label>
+            <input type="text" id="productName" name="productName" class="w-full p-2 border rounded" required>
+            <label for="productDescription" class="block mt-3 mb-2">Product Description:</label>
+            <textarea id="productDescription" name="productDescription" class="w-full p-2 border rounded" required></textarea>
+            <label for="brandName" class="block mt-3 mb-2">Brand Name:</label>
+            <input type="text" id="brandName" name="brandName" class="w-full p-2 border rounded" required>
+            <label for="modelNumber" class="block mt-3 mb-2">Model Number:</label>
+            <input type="text" id="modelNumber" name="modelNumber" class="w-full p-2 border rounded" required>
+            <label for="manufacturerInfo" class="block mt-3 mb-2">Manufacturer Information:</label>
+            <input type="text" id="manufacturerInfo" name="manufacturerInfo" class="w-full p-2 border rounded" required>
+            <label for="upcEanCode" class="block mt-3 mb-2">UPC/EAN Code:</label>
+            <input type="text" id="upcEanCode" name="upcEanCode" class="w-full p-2 border rounded" required>
+
+            <!-- Ingredients (for applicable products) -->
+            <h3 class="text-lg font-semibold mt-4">Ingredients (for applicable products)</h3>
+            <label for="ingredientsList" class="block mt-3 mb-2">List of Ingredients:</label>
+            <textarea id="ingredientsList" name="ingredientsList" class="w-full p-2 border rounded"></textarea>
+            <label for="allergenInfo" class="block mt-3 mb-2">Allergen Information:</label>
+            <textarea id="allergenInfo" name="allergenInfo" class="w-full p-2 border rounded"></textarea>
+            <label for="nutritionalInfo" class="block mt-3 mb-2">Nutritional Information:</label>
+            <textarea id="nutritionalInfo" name="nutritionalInfo" class="w-full p-2 border rounded"></textarea>
+
+            <!-- Product Images -->
+            <h3 class="text-lg font-semibold mt-4">Product Images</h3>
+            <!-- Add file input for images (you may need additional logic for file uploads) -->
+
+            <!-- Regulatory Information -->
+            <h3 class="text-lg font-semibold mt-4">Regulatory Information</h3>
+            <label for="safetyLabels" class="block mt-3 mb-2">Safety Labels:</label>
+            <input type="text" id="safetyLabels" name="safetyLabels" class="w-full p-2 border rounded">
+            <label for="certificationInfo" class="block mt-3 mb-2">Certification Information (ISO, FDA, etc.):</label>
+            <textarea id="certificationInfo" name="certificationInfo" class="w-full p-2 border rounded"></textarea>
+            <label for="complianceInfo" class="block mt-3 mb-2">Compliance with Local and International Regulations:</label>
+            <textarea id="complianceInfo" name="complianceInfo" class="w-full p-2 border rounded"></textarea>
+
+            <!-- Pricing and Availability -->
+            <h3 class="text-lg font-semibold mt-4">Pricing and Availability</h3>
+            <label for="price" class="block mt-3 mb-2">Price:</label>
+            <input type="text" id="price" name="price" class="w-full p-2 border rounded">
+            <label for="availabilityStatus" class="block mt-3 mb-2">Availability Status:</label>
+            <select id="availabilityStatus" name="availabilityStatus" class="w-full p-2 border rounded">
+                <option value="inStock">In Stock</option>
+                <option value="outOfStock">Out of Stock</option>
+            </select>
+            <label for="specialOffers" class="block mt-3 mb-2">Special Offers or Discounts:</label>
+            <input type="text" id="specialOffers" name="specialOffers" class="w-full p-2 border rounded">
+
+            Additional Details
+            <h3 class="text-lg font-semibold mt-4">Additional Details</h3>
+            <label for="weightQuantity" class="block mt-3 mb-2">Weight or Quantity:</label>
+            <input type="number" id="weightQuantity" name="weightQuantity" class="w-full p-2 border rounded">
+            <label for="expiryDate" class="block mt-3 mb-2">Expiry Date:</label>
+            <input type="date" id="expiryDate" name="expiryDate" class="w-full p-2 border rounded">
+            <label for="countryOfOrigin" class="block mt-3 mb-2">Country of Origin:</label>
+            <input type="text" id="countryOfOrigin" name="countryOfOrigin" class="w-full p-2 border rounded">
+            <label for="usageInstructions" class="block mt-3 mb-2">Usage Instructions:</label>
+            <textarea id="usageInstructions" name="usageInstructions" class="w-full p-2 border rounded"></textarea>
+            <label for="storageInstructions" class="block mt-3 mb-2">Storage Instructions:</label>
+            <textarea id="storageInstructions" name="storageInstructions" class="w-full p-2 border rounded"></textarea>
+
+            <!-- User Reviews and Ratings -->
+            <h3 class="text-lg font-semibold mt-4">User Reviews and Ratings</h3>
+            <!-- You can add a section for user reviews and ratings as needed -->
+
+            <!-- Supplier or Seller Information -->
+            <h3 class="text-lg font-semibold mt-4">Supplier or Seller Information</h3>
+            <label for="supplierName" class="block mt-3 mb-2">Supplier Name:</label>
+            <input type="text" id="supplierName" name="supplierName" class="w-full p-2 border rounded">
+            <label for="sellerInfo" class="block mt-3 mb-2">Seller Information:</label>
+            <textarea id="sellerInfo" name="sellerInfo" class="w-full p-2 border rounded"></textarea>
+
+            <button type="button" onclick="register()" class="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Register</button>
+        </form>
+        <p class="mt-4">Already have an account? <a href="index.html" class="text-blue-500">Login here</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
