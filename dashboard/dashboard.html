@@ -23,7 +23,7 @@
     </div>
     <div class="h-full flex">
       <!-- sidebar -->
-      <div class="p-4 bg-gray-300 pt-5 hidden md:flex">
+      <div class="py-5 px-2 bg-gray-300 hidden md:flex">
         <ul class="flex flex-col space-y-4">
           <li
             class="p-2 hover:bg-gray-400 cursor-pointer transition-all duration-100 ease-in-out font-semibold text-gray-700 hover:text-gray-900"
@@ -45,7 +45,9 @@
       </div>
 
       <!-- main -->
-      <div id="dynamicContent" class="p-3"></div>
+      <div id="dynamicContent" class="p-3 w-full overflow-y-scroll">
+        <!-- content goes here -->
+      </div>
     </div>
 
     <!-- function to load content -->
