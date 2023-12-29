@@ -1,26 +1,47 @@
 <!-- index.html (Login Page) -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Login Page</title>
-</head>
-<body class="bg-gray-100 flex justify-center items-center h-screen">
+  </head>
+  <body class="bg-gray-100 flex justify-center items-center h-screen">
     <div class="container mx-auto p-6 bg-white rounded shadow-md">
-        <form id="loginForm">
-            <h2 class="text-2xl font-bold mb-4">Login</h2>
-            <label for="username" class="block mb-2">Username:</label>
-            <input type="text" id="username" name="username" class="w-full p-2 border rounded" required>
-            <label for="password" class="block mt-3 mb-2">Password:</label>
-            <input type="password" id="password" name="password" class="w-full p-2 border rounded" required>
-            <button type="button" onclick="login()" class="mt-4 bg-green-500 text-white p-2 rounded hover:bg-green-600">Login</button>
-        </form>
-        <p class="mt-4">Don't have an account? <a href="register.html" class="text-blue-500">Register here</a></p>
+      <form id="loginForm">
+        <h2 class="text-2xl font-bold mb-4">Login</h2>
+        <label for="username" class="block mb-2">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="w-full p-2 border rounded"
+          required
+        />
+        <label for="password" class="block mt-3 mb-2">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="w-full p-2 border rounded"
+          required
+        />
+        <button
+          type="button"
+          onclick="login()"
+          class="mt-4 bg-green-500 text-white p-2 rounded hover:bg-green-600"
+        >
+          Login
+        </button>
+      </form>
+      <p class="mt-4">
+        Don't have an account?
+        <a href="register.html" class="text-blue-500">Register here</a>
+      </p>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
