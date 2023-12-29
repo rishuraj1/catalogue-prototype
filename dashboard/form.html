@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body class="bg-gray-200">
+    <div class="flex w-full justify-between">
+      <!-- image section -->
+      <div class="flex flex-col gap-2">
+        <label for="image" class="text-black font-semibold">Upload image</label>
+        <!-- show selected image -->
+        <div id="output"></div>
+        <input type="file" name="image" id="image" onchange="loadFile(event)" />
+      </div>
+
+      <!-- product details -->
+      <div class="flex flex-col space-y-4">
+        <div class="flex flex-col gap-2">
+          <label for="name">Product name</label>
+          <input type="text">
+        </div>
+      </div>
+    </div>
+
+    <!-- script to display image once selected -->
+    <script>
+      function loadFile(event) {
+        var output = document.getElementById("output");
+        output.innerHTML = ""; // Clear previous content
+
+        var input = event.target;
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            var img = document.createElement("img");
+            img.src = e.target.result;
+            img.width = 200;
+            img.height = 200;
+            img.alt = "Selected Image";
+            img.classList.add("w-64", "h-64", "object-cover", "object-center");
+            output.appendChild(img);
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+    </script>
+  </body>
+</html>

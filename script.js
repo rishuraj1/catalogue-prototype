@@ -5,7 +5,7 @@ function login() {
     var password = document.getElementById('password').value;
 
     // redirect to the dashboard page
-    window.location.href = 'dashboard.html';
+    window.location.href = './dashboard/dashboard.html';
 }
 
 function register() {
@@ -19,5 +19,5 @@ function register() {
     console.log("register ho gya");
 
     // redirect to the dashboard page
-    window.location.href = 'dashboard.html';
+    window.location.href = './dashboard/dashboard.html';
 }
